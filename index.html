@@ -1,0 +1,338 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel do Aluno | SGE</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #172033;
+      background: #f4f7fb;
+      line-height: 1.5;
+    }
+
+    header {
+      background: #183b67;
+      color: white;
+      padding: 22px 7%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
+
+    .brand span {
+      color: #80d5d0;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 42px 22px 56px;
+    }
+
+    .welcome {
+      background: linear-gradient(120deg, #e1f4f3, #e9efff);
+      border-radius: 18px;
+      padding: 30px;
+      margin-bottom: 32px;
+    }
+
+    .eyebrow {
+      color: #236b75;
+      font-weight: bold;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    h1 {
+      margin: 8px 0;
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      line-height: 1.15;
+    }
+
+    .welcome p {
+      margin-bottom: 0;
+      color: #4b5870;
+      max-width: 650px;
+    }
+
+    .section-heading {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 1.45rem;
+    }
+
+    .section-heading p {
+      margin: 4px 0 0;
+      color: #68758a;
+    }
+
+    .events {
+      display: grid;
+      grid-template-columns: repeat(
+        auto-fit, minmax(245px, 1fr)
+      );
+      gap: 20px;
+    }
+
+    .event {
+      background: white;
+      border: 1px solid #e1e7f0;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 6px 18px rgba(24, 59, 103, 0.06);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .event-top {
+      padding: 18px 20px;
+      background: #edf4ff;
+      border-bottom: 1px solid #e1e7f0;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 4px 9px;
+      border-radius: 999px;
+      background: #d8e8ff;
+      color: #214f86;
+      font-size: 0.76rem;
+      font-weight: bold;
+    }
+
+    .event h3 {
+      margin: 12px 0 0;
+      font-size: 1.18rem;
+    }
+
+    .event-content {
+      padding: 18px 20px 20px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .event-content p {
+      margin: 0 0 10px;
+      color: #5d687b;
+      font-size: 0.93rem;
+    }
+
+    .event-content .description {
+      margin-bottom: 18px;
+    }
+
+    button {
+      margin-top: auto;
+      border: 0;
+      border-radius: 9px;
+      padding: 11px 15px;
+      color: white;
+      background: #176b70;
+      font-weight: bold;
+      font-size: 0.95rem;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #10565a;
+    }
+
+    .note {
+      margin-top: 24px;
+      padding: 15px 18px;
+      background: #fff8e8;
+      border-left: 4px solid #e7b54b;
+      border-radius: 8px;
+      color: #5f512e;
+      font-size: 0.92rem;
+    }
+
+    footer {
+      background: #142c4a;
+      color: #e5edf8;
+      text-align: center;
+      padding: 23px 18px;
+      font-size: 0.9rem;
+    }
+
+    footer p {
+      margin: 3px 0;
+    }
+
+    @media (max-width: 560px) {
+      header {
+        padding: 20px 6%;
+      }
+
+      main {
+        padding: 28px 16px 40px;
+      }
+
+      .welcome {
+        padding: 23px;
+      }
+
+      nav {
+        gap: 13px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="brand">
+      SGE <span>| Eventos</span>
+    </div>
+
+    <nav aria-label="Navegação principal">
+      <a href="#inicio">Início</a>
+      <a href="#eventos">Próximos eventos</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <main id="inicio">
+    <section class="welcome">
+      <div class="eyebrow">
+        Sistema de Gestão de Eventos
+      </div>
+
+      <h1>Olá, aluno(a)!</h1>
+
+      <p>
+        Confira os próximos eventos da escola técnica
+        e encontre novas oportunidades para aprender,
+        trocar experiências e desenvolver suas habilidades.
+      </p>
+    </section>
+
+    <section id="eventos">
+      <div class="section-heading">
+        <div>
+          <h2>Próximos Eventos</h2>
+          <p>
+            Veja os detalhes e escolha de qual participar.
+          </p>
+        </div>
+      </div>
+
+      <div class="events">
+
+        <article class="event">
+          <div class="event-top">
+            <span class="tag">Palestra</span>
+            <h3>Inteligência Artificial na Prática</h3>
+          </div>
+
+          <div class="event-content">
+            <p><strong>Data:</strong> 22/10/2026</p>
+            <p><strong>Horário:</strong> 19h às 21h</p>
+            <p><strong>Local:</strong> Auditório da escola</p>
+
+            <p class="description">
+              Uma introdução às aplicações da inteligência
+              artificial nos estudos e no mercado de trabalho.
+            </p>
+
+            <button type="button">Inscrever-se</button>
+          </div>
+        </article>
+
+        <article class="event">
+          <div class="event-top">
+            <span class="tag">Oficina</span>
+            <h3>Desenvolvimento Web</h3>
+          </div>
+
+          <div class="event-content">
+            <p><strong>Data:</strong> 27/10/2026</p>
+            <p><strong>Horário:</strong> 14h às 16h</p>
+            <p><strong>Local:</strong> Laboratório de informática</p>
+
+            <p class="description">
+              Atividade introdutória para conhecer a estrutura
+              de páginas com HTML e CSS.
+            </p>
+
+            <button type="button">Inscrever-se</button>
+          </div>
+        </article>
+
+        <article class="event">
+          <div class="event-top">
+            <span class="tag">Workshop</span>
+            <h3>Carreira e Tecnologia</h3>
+          </div>
+
+          <div class="event-content">
+            <p><strong>Data:</strong> 04/11/2026</p>
+            <p><strong>Horário:</strong> 9h às 11h</p>
+            <p><strong>Local:</strong> Sala multimídia</p>
+
+            <p class="description">
+              Conversa sobre profissões da área de tecnologia,
+              competências e oportunidades.
+            </p>
+
+            <button type="button">Inscrever-se</button>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="note">
+        Protótipo visual para demonstração acadêmica.
+        Os botões de inscrição ainda não reservam vagas.
+      </div>
+    </section>
+  </main>
+
+  <footer id="contato">
+    <p><strong>SGE — Sistema de Gestão de Eventos</strong></p>
+    <p>Escola Técnica · Em caso de dúvidas, procure a secretaria.</p>
+  </footer>
+</body>
+</html>
